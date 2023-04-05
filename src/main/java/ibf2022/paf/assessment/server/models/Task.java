@@ -6,10 +6,17 @@ import java.sql.Date;
 
 public class Task {
 
+    private int task_Id;
     private String description;
     private int priority;
     private Date dueDate;
     
+    public int getTask_Id() {
+        return task_Id;
+    }
+    public void setTask_Id(int task_Id) {
+        this.task_Id = task_Id;
+    }
     public String getDescription() {
         return description;
     }
@@ -28,17 +35,14 @@ public class Task {
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
-    public Task(String description, int priority, Date dueDate) {
-        this.description = description;
-        this.priority = priority;
-        this.dueDate = dueDate;
-    }
-    
     @Override
     public String toString() {
-        return "Task [description=" + description + ", priority=" + priority + ", dueDate=" + dueDate + "]";
+        return "Task [task_Id=" + task_Id + ", description=" + description + ", priority=" + priority + ", dueDate="
+                + dueDate + "]";
     }
+   
+  
+    
+   
 
-    
-    
 }

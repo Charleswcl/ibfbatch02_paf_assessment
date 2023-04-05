@@ -2,6 +2,7 @@ package ibf2022.paf.assessment.server;
 
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
+import ibf2022.paf.assessment.server.models.Task;
 import ibf2022.paf.assessment.server.models.User;
 
 public class Utils {
@@ -13,5 +14,12 @@ public class Utils {
         user.setName(rs.getString("name"));
         return user;
     }
-    
+  
+    public static Task toInsertTask (SqlRowSet rs) {
+        Task task = new Task();
+        task.getDescription();
+        task.getPriority();
+        task.getDueDate();
+        return task;
+    }
 }

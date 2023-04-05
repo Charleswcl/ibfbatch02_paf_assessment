@@ -33,9 +33,9 @@ public class UserRepository {
 		return Optional.of(Utils.toUser(rs));
     }
 
-    public String insertUser (String username, String name){
+    public String insertUser (User user){
         String user_Id = UUID.randomUUID().toString().substring(0, 8);
-        template.update(SQL_INSERT_USER, user_Id, username, name);
+        template.update(SQL_INSERT_USER, user_Id, user.getUsername(), user.getName());
         return user_Id;
     }
 }
